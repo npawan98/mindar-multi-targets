@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const videoPlayer1 = await createYoutube('uYJQIKAVBw8');
+    const videoPlayer2 = await createYoutube('uYJQIKAVBw8');
 
 
     const mindarThree = new window.MINDAR.IMAGE.MindARThree({
@@ -74,7 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       imageTarget1.onTargetLost = () => {
         videoPlayer1.pauseVideo();
-        imageTarget1.group.remove(obj);
       }
     } catch(err){
       alert(err)
@@ -85,10 +85,10 @@ document.addEventListener('DOMContentLoaded', () => {
       imageTarget2.group.add(obj);
   
       imageTarget2.onTargetFound = () => {
-        videoPlayer1.playVideo();
+        videoPlayer2.playVideo();
       }
       imageTarget2.onTargetLost = () => {
-        videoPlayer1.pauseVideo();
+        videoPlayer2.pauseVideo();
       }
     }catch(err){
       alert(err)
