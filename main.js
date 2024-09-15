@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     anchor1.group.add(plane2);
 
     anchor1.onTargetFound = () => {
+      video.pause();
       video2.play();
     }
     anchor1.onTargetLost = () => {
