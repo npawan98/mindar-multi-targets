@@ -29,6 +29,27 @@ document.addEventListener('DOMContentLoaded', () => {
       video.currentTime = 6;
     });
 
+
+    // video 2
+    const video2 = await loadVideo("./assets/videos/vid2.mp4");
+    const geometry2 = new THREE.PlaneGeometry(1, 1080/1656);
+    const plane2 = new THREE.Mesh(geometry2, material);
+
+    const anchor1 = mindarThree.addAnchor(1);
+    anchor1.group.add(plane2);
+
+    anchor1.onTargetFound = () => {
+      video2.play();
+    }
+    anchor1.onTargetLost = () => {
+      video2.pause();
+    }
+    video.addEventListener( 'play', () => {
+      video2.currentTime = 0;
+    });
+
+
+
     await mindarThree.start();
     renderer.setAnimationLoop(() => {
       renderer.render(scene, camera);
