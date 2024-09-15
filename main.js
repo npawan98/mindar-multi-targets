@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     const {renderer, scene, camera} = mindarThree;
 
-    const video = await loadVideo("./assets/videos/vid2.mp4");
+    const video = await loadVideo("./assets/videos/sintel.mp4");
     const texture = new THREE.VideoTexture(video);
 
     const geometry = new THREE.PlaneGeometry(1, 204/480);
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
       video2.pause();
     }
     video.addEventListener( 'play', () => {
-      video2.currentTime = 0;
+      // video2.currentTime = 0;
     });
 
 
