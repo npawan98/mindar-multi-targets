@@ -77,15 +77,15 @@ document.addEventListener('DOMContentLoaded', () => {
       videoPlayer1.pauseVideo();
     }
 
-    const imageTarget2 = mindarThree.addCSSAnchor(1);
-    imageTarget2.group.add(obj);
+    // const imageTarget2 = mindarThree.addCSSAnchor(1);
+    // imageTarget2.group.add(obj);
 
-    imageTarget2.onTargetFound = () => {
-      videoPlayer2.playVideo();
-    }
-    imageTarget1.onTargetLost = () => {
-      videoPlayer2.pauseVideo();
-    }
+    // imageTarget2.onTargetFound = () => {
+    //   videoPlayer2.playVideo();
+    // }
+    // imageTarget1.onTargetLost = () => {
+    //   videoPlayer2.pauseVideo();
+    // }
 
 
 
