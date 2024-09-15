@@ -74,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       imageTarget1.onTargetLost = () => {
         videoPlayer1.pauseVideo();
+        imageTarget1.group.remove(obj);
       }
     } catch(err){
       alert(err)
