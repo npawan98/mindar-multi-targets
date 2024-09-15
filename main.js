@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
       videoPlayer1.pauseVideo();
     }
 
-    const imageTarget2 = mindarThree.addCSSAnchor(0);
+    const imageTarget2 = mindarThree.addCSSAnchor(1);
     imageTarget2.group.add(obj);
 
     imageTarget2.onTargetFound = () => {
