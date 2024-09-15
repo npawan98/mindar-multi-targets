@@ -65,26 +65,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const obj = new CSS3DObject(document.querySelector("#ar-div"));
 
-    const imageTarget1 = mindarThree.addCSSAnchor(0);
-    imageTarget1.group.add(obj);
-
-    imageTarget1.onTargetFound = () => {
-      videoPlayer1.playVideo();
+    try{
+      const imageTarget1 = mindarThree.addCSSAnchor(0);
+      imageTarget1.group.add(obj);
+  
+      imageTarget1.onTargetFound = () => {
+        videoPlayer1.playVideo();
+      }
+      imageTarget1.onTargetLost = () => {
+        videoPlayer1.pauseVideo();
+      }
+    } catch(err){
+      alert(err)
     }
-    imageTarget1.onTargetLost = () => {
-      videoPlayer1.pauseVideo();
+
+    try{
+      const imageTarget2 = mindarThree.addCSSAnchor(1);
+      imageTarget2.group.add(obj);
+  
+      imageTarget2.onTargetFound = () => {
+        videoPlayer1.playVideo();
+      }
+      imageTarget2.onTargetLost = () => {
+        videoPlayer1.pauseVideo();
+      }
+    }catch(err){
+      alert(err)
     }
 
 
-    const imageTarget2 = mindarThree.addCSSAnchor(1);
-    imageTarget2.group.add(obj);
 
-    imageTarget2.onTargetFound = () => {
-      videoPlayer1.playVideo();
-    }
-    imageTarget2.onTargetLost = () => {
-      videoPlayer1.pauseVideo();
-    }
 
 
 
