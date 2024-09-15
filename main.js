@@ -33,6 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const videoPlayer1 = await createYoutube('uYJQIKAVBw8');
+    const videoPlayer2 = await createYoutube('0jIeCAOkgcQ');
+    const videoPlayer3 = await createYoutube('kooYQ0IOnoM');
 
 
     const mindarThree = new window.MINDAR.IMAGE.MindARThree({
@@ -64,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const { renderer, cssRenderer, scene, cssScene, camera } = mindarThree;
 
     const obj = new CSS3DObject(document.querySelector("#ar-div"));
+
     const imageTarget1 = mindarThree.addCSSAnchor(0);
     imageTarget1.group.add(obj);
 
@@ -72,6 +75,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     imageTarget1.onTargetLost = () => {
       videoPlayer1.pauseVideo();
+    }
+
+    const imageTarget2 = mindarThree.addCSSAnchor(0);
+    imageTarget2.group.add(obj);
+
+    imageTarget2.onTargetFound = () => {
+      videoPlayer2.playVideo();
+    }
+    imageTarget1.onTargetLost = () => {
+      videoPlayer2.pauseVideo();
     }
 
 
