@@ -33,8 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const videoPlayer1 = await createYoutube('uYJQIKAVBw8');
-    const videoPlayer2 = await createYoutube('0jIeCAOkgcQ');
-    const videoPlayer3 = await createYoutube('kooYQ0IOnoM');
+    const videoPlayer2 = await createYoutube('uYJQIKAVBw8');
+    const videoPlayer3 = await createYoutube('uYJQIKAVBw8');
 
 
     const mindarThree = new window.MINDAR.IMAGE.MindARThree({
